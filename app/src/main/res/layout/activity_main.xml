@@ -283,7 +283,7 @@
                     android:orientation="horizontal"
                     android:padding="5dp">
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipBroadcastPart1"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -295,7 +295,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipBroadcastPart2"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -307,7 +307,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipBroadcastPart3"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -319,7 +319,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipBroadcastPart4"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -350,7 +350,7 @@
                     android:orientation="horizontal"
                     android:padding="5dp">
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipFirstPart1"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -362,7 +362,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipFirstPart2"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -374,7 +374,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipFirstPart3"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -386,7 +386,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipFirstPart4"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -417,7 +417,7 @@
                     android:orientation="horizontal"
                     android:padding="5dp">
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipLastPart1"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -429,7 +429,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipLastPart2"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -441,7 +441,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipLastPart3"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -453,7 +453,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipLastPart4"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -484,7 +484,7 @@
                     android:orientation="horizontal"
                     android:padding="5dp">
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipNetworkPart1"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -496,7 +496,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipNetworkPart2"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -508,7 +508,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipNetworkPart3"
                         style="@style/NumberInput"
                         android:layout_width="0dp"
@@ -520,7 +520,7 @@
                         android:layout_height="wrap_content"
                         android:minWidth="10dp" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/ipNetworkPart4"
                         style="@style/NumberInput"
                         android:layout_width="0dp"

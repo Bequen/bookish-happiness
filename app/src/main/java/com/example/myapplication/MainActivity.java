@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,25 +23,25 @@ public class MainActivity extends AppCompatActivity {
     private TextView ipMaskPart3;
     private TextView ipMaskPart4;
 
-    private EditText ipNetworkPart1;
-    private EditText ipNetworkPart2;
-    private EditText ipNetworkPart3;
-    private EditText ipNetworkPart4;
+    private TextView ipNetworkPart1;
+    private TextView ipNetworkPart2;
+    private TextView ipNetworkPart3;
+    private TextView ipNetworkPart4;
 
-    private EditText ipFirstPart1;
-    private EditText ipFirstPart2;
-    private EditText ipFirstPart3;
-    private EditText ipFirstPart4;
+    private TextView ipFirstPart1;
+    private TextView ipFirstPart2;
+    private TextView ipFirstPart3;
+    private TextView ipFirstPart4;
 
-    private EditText ipLastPart1;
-    private EditText ipLastPart2;
-    private EditText ipLastPart3;
-    private EditText ipLastPart4;
+    private TextView ipLastPart1;
+    private TextView ipLastPart2;
+    private TextView ipLastPart3;
+    private TextView ipLastPart4;
 
-    private EditText ipBroadcastPart1;
-    private EditText ipBroadcastPart2;
-    private EditText ipBroadcastPart3;
-    private EditText ipBroadcastPart4;
+    private TextView ipBroadcastPart1;
+    private TextView ipBroadcastPart2;
+    private TextView ipBroadcastPart3;
+    private TextView ipBroadcastPart4;
 
     private EditText ipMask;
 
@@ -118,6 +119,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 try {
+                    if(Integer.parseInt(ipMask.getText().toString()) > 32) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-32", Toast.LENGTH_LONG).show();
+                        ipMask.setText("32");
+                    }
+                    if(Integer.parseInt(ipMask.getText().toString()) < 0) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-32", Toast.LENGTH_LONG).show();
+                        ipMask.setText("0");
+                    }
                     currentMask = Integer.parseInt(ipMask.getText().toString());
                     SolveMask();
                     SolveNetwork();
@@ -143,6 +152,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 try {
+                    if(Integer.parseInt(ipPart1.getText().toString()) > 255) {
+                         Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart1.setText("255");
+                    }
+                    if(Integer.parseInt(ipPart2.getText().toString()) > 255) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart2.setText("255");
+                    }
+                    if(Integer.parseInt(ipPart3.getText().toString()) > 255) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart3.setText("255");
+                    }
+                    if(Integer.parseInt(ipPart4.getText().toString()) > 255) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart4.setText("255");
+                    }
+
+                    if(Integer.parseInt(ipPart1.getText().toString()) < 0) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart1.setText("0");
+                    }
+                    if(Integer.parseInt(ipPart2.getText().toString()) < 0) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart2.setText("0");
+                    }
+                    if(Integer.parseInt(ipPart3.getText().toString()) < 0) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart3.setText("0");
+                    }
+                    if(Integer.parseInt(ipPart4.getText().toString()) < 0) {
+                        Toast.makeText(getApplicationContext(), "Range is 0-255", Toast.LENGTH_LONG).show();
+                        ipPart4.setText("0");
+                    }
+
                     currentIp = IpCalc.ParseAddress(Integer.parseInt(ipPart1.getText().toString()),
                             Integer.parseInt(ipPart2.getText().toString()),
                             Integer.parseInt(ipPart3.getText().toString()),
@@ -171,25 +214,25 @@ public class MainActivity extends AppCompatActivity {
         ipMaskPart3 = (TextView) findViewById(R.id.ipMaskPart3);
         ipMaskPart4 = (TextView) findViewById(R.id.ipMaskPart4);
 
-        ipNetworkPart1 = (EditText) findViewById(R.id.ipNetworkPart1);
-        ipNetworkPart2 = (EditText) findViewById(R.id.ipNetworkPart2);
-        ipNetworkPart3 = (EditText) findViewById(R.id.ipNetworkPart3);
-        ipNetworkPart4 = (EditText) findViewById(R.id.ipNetworkPart4);
+        ipNetworkPart1 = (TextView) findViewById(R.id.ipNetworkPart1);
+        ipNetworkPart2 = (TextView) findViewById(R.id.ipNetworkPart2);
+        ipNetworkPart3 = (TextView) findViewById(R.id.ipNetworkPart3);
+        ipNetworkPart4 = (TextView) findViewById(R.id.ipNetworkPart4);
 
-        ipFirstPart1 = (EditText) findViewById(R.id.ipFirstPart1);
-        ipFirstPart2 = (EditText) findViewById(R.id.ipFirstPart2);
-        ipFirstPart3 = (EditText) findViewById(R.id.ipFirstPart3);
-        ipFirstPart4 = (EditText) findViewById(R.id.ipFirstPart4);
+        ipFirstPart1 = (TextView) findViewById(R.id.ipFirstPart1);
+        ipFirstPart2 = (TextView) findViewById(R.id.ipFirstPart2);
+        ipFirstPart3 = (TextView) findViewById(R.id.ipFirstPart3);
+        ipFirstPart4 = (TextView) findViewById(R.id.ipFirstPart4);
 
-        ipLastPart1 = (EditText) findViewById(R.id.ipLastPart1);
-        ipLastPart2 = (EditText) findViewById(R.id.ipLastPart2);
-        ipLastPart3 = (EditText) findViewById(R.id.ipLastPart3);
-        ipLastPart4 = (EditText) findViewById(R.id.ipLastPart4);
+        ipLastPart1 = (TextView) findViewById(R.id.ipLastPart1);
+        ipLastPart2 = (TextView) findViewById(R.id.ipLastPart2);
+        ipLastPart3 = (TextView) findViewById(R.id.ipLastPart3);
+        ipLastPart4 = (TextView) findViewById(R.id.ipLastPart4);
 
-        ipBroadcastPart1 = (EditText) findViewById(R.id.ipBroadcastPart1);
-        ipBroadcastPart2 = (EditText) findViewById(R.id.ipBroadcastPart2);
-        ipBroadcastPart3 = (EditText) findViewById(R.id.ipBroadcastPart3);
-        ipBroadcastPart4 = (EditText) findViewById(R.id.ipBroadcastPart4);
+        ipBroadcastPart1 = (TextView) findViewById(R.id.ipBroadcastPart1);
+        ipBroadcastPart2 = (TextView) findViewById(R.id.ipBroadcastPart2);
+        ipBroadcastPart3 = (TextView) findViewById(R.id.ipBroadcastPart3);
+        ipBroadcastPart4 = (TextView) findViewById(R.id.ipBroadcastPart4);
 
         ipMask = (EditText) findViewById(R.id.ipMask);
 
